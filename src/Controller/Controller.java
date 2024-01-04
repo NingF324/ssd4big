@@ -115,6 +115,7 @@ public class Controller {
     public void exec()throws IOException{
         headPorTrait.setModailty(register);  //设置为模态窗口,更换头像时不能操作注册窗口
         alert.setModailty(ch);  //设置为模态窗口,有警告时不能操作主窗口
+        alert.setAlwaysOnTop(true); //设置警告窗口一直在最上面
         friendpage.setModailty(ch); //设置为模态窗口,查看好友资料时不能操作主窗口
         initEvent();
         dialogExec();

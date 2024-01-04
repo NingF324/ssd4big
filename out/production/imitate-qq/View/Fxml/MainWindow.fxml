@@ -9,10 +9,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="567.0" prefWidth="638.0" stylesheets="@CSS/MianWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="567.0" prefWidth="638.0" stylesheets="@CSS/MianWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainWindowController">
    <children>
       <ListView id="ChatList" layoutY="55.0" prefHeight="389.0" prefWidth="638.0" />
-      <TextField id="input" layoutX="3.0" layoutY="443.0" prefHeight="131.0" prefWidth="634.0">
+      <TextField id="input" fx:id="inputText" layoutX="3.0" layoutY="443.0" onKeyReleased="#inputEnter" prefHeight="131.0" prefWidth="634.0">
          <font>
             <Font size="20.0" />
          </font>
@@ -27,8 +27,8 @@
             <Button id="quit1" layoutX="595.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="37.0" />
          </children>
       </Pane>
-      <Button id="quit2" layoutX="464.0" layoutY="530.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="关闭" />
-      <Button id="send" layoutX="550.0" layoutY="530.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="发送" />
+      <Button id="quit2" fx:id="exitBtn" layoutX="464.0" layoutY="530.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="关闭" />
+      <Button id="send" fx:id="sendBtn" layoutX="550.0" layoutY="530.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="发送" />
       <Button id="emoji" layoutX="3.0" layoutY="443.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="37.0" />
       <Button id="file" layoutX="40.0" layoutY="443.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="37.0" />
       <Button id="image" layoutX="77.0" layoutY="443.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="37.0" />
